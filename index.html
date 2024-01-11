@@ -19,13 +19,14 @@
     </head>
     <body>
         <div class="container">
-            <div class="header">
+            <div class="header" role="header">
                 <input
                     type="color"
                     id="color-picker"
                     class="color-picker"
-                    value="#FF8647">
-                <select id="select-color-mode" class="select-color-mode">
+                    value="#FF8647"
+                    aria-label="Select color">
+                <select id="select-color-mode" class="select-color-mode" aria-label="Select color mode">
                     <option value="monochrome">Monochrome</option>
                     <option value="monochrome-dark">Monochrome-dark</option>
                     <option value="monochrome-light">Monochrome-light</option>
@@ -40,7 +41,7 @@
                     Get Color Scheme
                 </button>
             </div>
-            <div id="color-scheme" class="color-scheme"></div>
+            <div id="color-scheme" class="color-scheme" role="main" aria-live="polite" aria-label="Dynamically loaded color schemes from which you can copy a color to clipboard"></div>
         </div>
         <script src="index.js" type="module"></script>
     </body>
